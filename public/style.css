@@ -1,0 +1,116 @@
+body {
+    background-color: #050505;
+    color: #e0e0e0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 1000px; /* Трохи ширше для зручності */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- СТИЛІЗАЦІЯ СКРОЛБАРУ (SCROLLBAR) --- */
+/* Весь скролбар */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+/* Фон скролбару */
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+/* Сам повзунок */
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+/* Повзунок при наведенні */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Блок з прокруткою (для таблиць і списків) */
+.scroll-box {
+    max-height: 250px; /* Максимальна висота */
+    overflow-y: auto;  /* Вмикає прокрутку, якщо контент не влазить */
+    border: 1px solid #222;
+    padding: 5px;
+    background: #0f0f0f;
+}
+
+h1, h2, h3 { text-transform: uppercase; letter-spacing: 1px; font-weight: 300; margin-top: 0; }
+h1 { border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 30px; font-size: 1.5em; color: #fff; }
+h3 { font-size: 0.8em; color: #888; margin-bottom: 15px; margin-top: 0; }
+
+/* Картка */
+.bank-card {
+    background: linear-gradient(135deg, #222 0%, #000 100%);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    height: 160px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+    color: #fff;
+    font-family: 'Courier New', monospace;
+}
+.card-chip {
+    width: 35px; height: 25px;
+    background: linear-gradient(135deg, #d4af37 20%, #aa8c2c 50%, #d4af37 100%);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.card-number { font-size: 1.3em; letter-spacing: 3px; margin-bottom: 25px; text-shadow: 0 2px 4px #000; }
+.card-holder { font-size: 0.7em; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+.card-balance { position: absolute; top: 25px; right: 25px; font-size: 1.1em; font-weight: bold; color: #fff; }
+
+/* Елементи форм */
+input, select, button {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    outline: none;
+}
+input:focus, select:focus { border-color: #666; background-color: #1a1a1a; }
+button {
+    background-color: #fff; color: #000; border: none; font-weight: bold;
+    cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.2s;
+}
+button:hover { background-color: #ccc; }
+.btn-outline { background: transparent; border: 1px solid #444; color: #aaa; }
+.btn-outline:hover { border-color: #fff; color: #fff; }
+.btn-small { padding: 5px 10px; font-size: 0.7em; width: auto; }
+
+/* Grid Layout */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.module { border: 1px solid #222; padding: 20px; background: #0c0c0c; margin-bottom: 20px; }
+
+/* Таблиця */
+table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+th { text-align: left; color: #555; padding: 8px; border-bottom: 1px solid #222; position: sticky; top: 0; background: #0f0f0f; }
+td { padding: 8px; border-bottom: 1px solid #1a1a1a; color: #aaa; }
+.amount-plus { color: #fff; }
+.amount-minus { color: #555; }
+
+/* Деталі (Accordian) */
+details summary {
+    outline: none; cursor: pointer; color: #888; padding: 10px; border: 1px solid #222; background: #111;
+    list-style: none; /* Ховаємо стандартний трикутник */
+    display: flex; justify-content: space-between;
+}
+details summary::-webkit-details-marker { display: none; }
+details[open] summary { border-bottom: 1px solid #222; background: #161616; color: #fff; }
+details .content { padding: 10px; background: #0f0f0f; border: 1px solid #222; border-top: none; }
+
+nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 20px; margin-bottom: 30px; }
+nav a { color: #555; text-decoration: none; font-size: 0.8em; }
+nav a:hover { color: #fff; }
