@@ -1,2 +1,2 @@
 # Bank
-.
+http://localhost:8000/dashboard
